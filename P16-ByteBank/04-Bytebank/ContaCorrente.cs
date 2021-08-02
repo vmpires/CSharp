@@ -10,11 +10,14 @@ namespace _04_ByteBank
     {
 
         public static int TotaldeContas { get; private set; }
+        public static int TaxaOperacao { get; private set; }
         public ContaCorrente(int agencia, int numero)
         {
             Agencia = agencia;
             Numero = numero;
+            TaxaOperacao = 30 / TotaldeContas;
             TotaldeContas++;
+
         }
 
         public Cliente Titular { get; set; }
