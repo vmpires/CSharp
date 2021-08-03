@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormPractice", "WindowsFormPractice.csproj", "{1DB7603D-1ADE-470B-B956-1622B01ACDEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora", "Calculadora.csproj", "{1DB7603D-1ADE-470B-B956-1622B01ACDEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visualizador de Imagens", "..\Visualizador de Imagens\Visualizador de Imagens.csproj", "{6D29D851-BEFD-4605-943C-01DCC3D30351}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1DB7603D-1ADE-470B-B956-1622B01ACDEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DB7603D-1ADE-470B-B956-1622B01ACDEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DB7603D-1ADE-470B-B956-1622B01ACDEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D29D851-BEFD-4605-943C-01DCC3D30351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D29D851-BEFD-4605-943C-01DCC3D30351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D29D851-BEFD-4605-943C-01DCC3D30351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D29D851-BEFD-4605-943C-01DCC3D30351}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
