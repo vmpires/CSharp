@@ -22,6 +22,19 @@ namespace Visualizador_de_Imagens
         {
             string[] arquivos = Directory.GetFiles(@"C:\windows\web\wallpaper", "*.jpg", SearchOption.AllDirectories);
             imagensListBox.Items.AddRange(arquivos);
+
+            //Ler do arquivo Favoritos
+            string path = ObterNomeArquivoConfig();
+            if (File.Exists(path))
+            {
+                var reader = new StreamReader(path);
+                while (!reader.EndOfStream)
+                {
+                    string arquivo = reader.ReadLine();
+                    favoritosListBox.Items.Add(arquivo);
+                }
+                reader.Close();
+            }                
         }
 
         private void imagensListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -30,15 +43,45 @@ namespace Visualizador_de_Imagens
             imagemPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
+        private string ObterNomeArquivoConfig()
+        {
+            string pasta = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string arquivo = "imagensConfig.txt";
+            string path = Path.Combine(pasta, arquivo);
+            return path;
+        }
+
         private void addButton_Click(object sender, EventArgs e)
         {
             favoritosListBox.Items.Add(imagensListBox.Text);
+            GravarConfig();
+        }
+
+        private void GravarConfig()
+        {
+            string path = ObterNomeArquivoConfig();
+            var writer = new StreamWriter(path);
+            foreach (string arquivo in favoritosListBox.Items)
+            {
+                writer.WriteLine(arquivo);
+            }
+            writer.Close();
         }
 
         private void favoritosListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             imagemPictureBox.ImageLocation = favoritosListBox.Text;
             imagemPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void removerButton_Click(object sender, EventArgs e)
+        {
+            if (favoritosListBox.SelectedItem!=null) 
+            { 
+                string itemSelecionado = favoritosListBox.SelectedItem.ToString();
+                favoritosListBox.Items.Remove(itemSelecionado);
+                GravarConfig();
+            }
         }
     }
 }

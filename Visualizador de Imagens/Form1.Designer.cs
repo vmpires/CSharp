@@ -35,6 +35,7 @@ namespace Visualizador_de_Imagens
             this.imagemPictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.removerButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imagemPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,9 +63,9 @@ namespace Visualizador_de_Imagens
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(108, 126);
+            this.addButton.Location = new System.Drawing.Point(107, 126);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(187, 26);
+            this.addButton.Size = new System.Drawing.Size(140, 26);
             this.addButton.TabIndex = 2;
             this.addButton.Text = "Adicionar às Favoritas";
             this.addButton.UseVisualStyleBackColor = true;
@@ -99,11 +100,22 @@ namespace Visualizador_de_Imagens
             this.label2.TabIndex = 5;
             this.label2.Text = "Todas as imagens";
             // 
+            // removerButton
+            // 
+            this.removerButton.Location = new System.Drawing.Point(259, 126);
+            this.removerButton.Name = "removerButton";
+            this.removerButton.Size = new System.Drawing.Size(140, 26);
+            this.removerButton.TabIndex = 6;
+            this.removerButton.Text = "Remover das Favoritas";
+            this.removerButton.UseVisualStyleBackColor = true;
+            this.removerButton.Click += new System.EventHandler(this.removerButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 529);
+            this.Controls.Add(this.removerButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.imagemPictureBox);
@@ -127,6 +139,7 @@ namespace Visualizador_de_Imagens
         private System.Windows.Forms.PictureBox imagemPictureBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button removerButton;
     }
 }
 
