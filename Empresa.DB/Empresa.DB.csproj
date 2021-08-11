@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net4.7.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Empresa.Models\Empresa.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.Data">
+      <SpecificVersion>true</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+
+</Project>
